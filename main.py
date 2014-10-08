@@ -3,7 +3,6 @@ import json
 import sys
 import datetime
 import secret
-from PyQt4 import QtGui
 
 
 ##this part is ugly
@@ -41,7 +40,6 @@ unpayedTickets = len(unpayed)
 
 
 def boot():
-    
     print "hello sir"
     print "wonderlan currently have {} bookings and {} are not yet paid".format(currentLan, unpayedTickets)
     start();
@@ -53,17 +51,11 @@ def start():
     if str == "exit":
         print "good night"
         exit();
-
-
-
-
 def search (str):
     for i in json_object['orders']:
         if i['email'] == str:
             print i;
             return;
-
-
 def searchInput():
     str = raw_input("email search: ");
     search(str)
